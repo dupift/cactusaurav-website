@@ -239,6 +239,19 @@ header {
     word-spacing: 1px;
     margin-left: -3%;
 }
+@media only screen and (max-width: 768px) {
+    .narcissist,
+    .lana,
+    .innerchild {
+        width: 100%;
+    }
+
+    .narcissist h3,
+    .lana h3,
+    .innerchild h3 {
+        margin-left: 0;
+    }
+}
 
 .saurav {
     position: relative;
