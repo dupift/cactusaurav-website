@@ -209,7 +209,7 @@ header {
 }
 
 .narcissist {
-    padding-left: 0%;
+    padding-left: 5%;
     padding-top: 0px;
 }
 
@@ -219,7 +219,7 @@ header {
 }
 
 .lana {
-    padding-left: 0%;
+    padding-left: 5%;
     margin-top: -80px;
 }
 
@@ -230,7 +230,7 @@ header {
 }
 
 .innerchild {
-    padding-left: 0%;
+    padding-left: 5%;
     margin-top: -80px;
 }
 
@@ -238,21 +238,6 @@ header {
     letter-spacing: 0.5px;
     word-spacing: 1px;
     margin-left: -3%;
-}
-@media only screen and (max-width: 768px) {
-    .narcissist,
-    .lana,
-    .innerchild {
-        width: 100% !important;
-        padding-left: 0 !important;
-        margin-top: 0 !important;
-    }
-
-    .narcissist h3,
-    .lana h3,
-    .innerchild h3 {
-        margin-left: 0 !important;
-    }
 }
 
 .saurav {
