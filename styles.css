@@ -317,6 +317,15 @@ header {
         top: calc(70% + 75px);
         left: 10%;
     }
+    .narcissist{
+        width: 100%;
+    }
+    .lana{
+        width: 100%;
+    }
+    .innerchild{
+        width: 100%;
+    }
 }
 @media screen and (max-width:768px) {
     #albumPoster{
