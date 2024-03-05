@@ -243,13 +243,15 @@ header {
     .narcissist,
     .lana,
     .innerchild {
-        width: 100%;
+        width: 100% !important;
+        padding-left: 0 !important;
+        margin-top: 0 !important;
     }
 
     .narcissist h3,
     .lana h3,
     .innerchild h3 {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 }
 
