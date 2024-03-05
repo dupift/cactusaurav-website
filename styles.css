@@ -79,7 +79,6 @@ header {
     background-color: #333;
 }
 
-
 .navbar {
     display: flex;
     list-style-type: none;
@@ -124,25 +123,6 @@ header {
 
 .light-theme .navbar-line {
     background-color: grey;
-}
-
-
-@media only screen and (max-width: 768px) {
-    .navbar {
-        padding: 0;
-        gap: 30px;
-    }
-
-    .navbar a {
-        margin-inline-end: -20px;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .navbar-line {
-        top: 4rem;
-    }
 }
 
 #theme-toggle {
@@ -210,9 +190,21 @@ header {
     width: 60%;
 }
 
-@media only screen and (max-width:768px) {
-    .pcontainer {
+@media only screen and (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        gap: 30px;
+    }
+
+    .navbar a {
+        margin-inline-end: -20px;
         width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .navbar-line {
+        top: 4rem;
     }
 }
 
@@ -267,19 +259,19 @@ header {
     opacity: 1;
     user-select: none;
 }
+
 .text {
     user-select: none;
     cursor: context-menu;
     position: absolute;
-    top: calc(70% + 100px); /* Adjust distance from album poster */
+    top: calc(70% + 100px);
     left: 8%;
     transform: translateX(-50%);
     text-align: center;
-    color:grey;
+    color: grey;
     font-size: 16px;
-    z-index: 3; /* Ensure text appears above everything */
+    z-index: 3;
 }
-
 
 #vinylImg {
     user-select: none;
@@ -292,7 +284,7 @@ header {
     z-index: 1;
     transition: transform 0.5s linear;
     opacity: 1;
-    animation: rotateVinyl 2s linear infinite; /* Continuous rotation */
+    animation: rotateVinyl 2s linear infinite;
 }
 
 @keyframes rotateVinyl {
@@ -303,168 +295,48 @@ header {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-@media screen and (max-width:1024px) {
-    #albumPoster{
+
+@media screen and (max-width: 1024px) {
+    #albumPoster {
         width: 120px;
         top: 70%;
     }
+
     #vinylImg {
         width: 110px;
         left: 13%;
         top: 70%;
     }
-    .text{
+
+    .text {
         top: calc(70% + 75px);
         left: 10%;
     }
-    .narcissist{
-        width: 100%;
-    }
-    .lana{
-        width: 100%;
-    }
-    .innerchild{
-        width: 100%;
-    }
 }
-@media screen and (max-width:768px) {
-    #albumPoster{
+
+@media screen and (max-width: 768px) {
+    #albumPoster {
         width: 100px;
         top: 50%;
-        
     }
+
     #vinylImg {
         width: 90px;
-        left: 20%;
+        left: 15%;
         top: 50%;
     }
-    
-    .text{
-        color: grey;
-        top: calc(50% + 50px); 
+
+    .text {
+        top: calc(50% + 50px);
         left: 8%;
     }
 }
-
-
 
 .saurav img {
     overflow-clip-margin: content-box;
     overflow: clip;
     user-select: none;
     cursor: pointer;
-    width: 100%;
-    height: auto;
-    filter: grayscale(100%);
-    opacity: 0.5;
-}
-
-
-.light-theme .saurav img {
-    transition: 0.5s;
-    opacity: 1;
-}
-.saurav {
-    position: relative;
-    display: inline-block;
-}
-
-#albumPoster {
-    color: white;
-    filter: none;
-    position: absolute;
-    top: 75%;
-    left: 8%;
-    width: 150px;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    opacity: 1;
-}
-
-.text {
-    position: absolute;
-    top: calc(70% + 105px); /* Adjust distance from album poster */
-    left: 7.5%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-    z-index: 3; /* Ensure text appears above everything */
-}
-.light-theme .text{
-    transition: ease-in-out 0.3s;
-    color: #ffffff;
-}
-.dark-theme .text{
-    transition: ease-in-out 0.3s;
-    color: #ffffff;
-    opacity: 0.7;
-}
-
-#vinylImg {
-    position: absolute;
-    top: 75%;
-    left: 13%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 145px;
-    height: auto;
-    z-index: 1;
-    transition: transform 0.5s linear;
-    opacity: 1;
-    animation: rotateVinyl 2s linear infinite; /* Continuous rotation */
-}
-
-@keyframes rotateVinyl { 
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-@media screen and (max-width:1024px) {
-    #albumPoster {
-        width: 120px;
-        top: 70%;
-    }
-    #vinylImg {
-        width: 110px;
-        left: 13%;
-        top: 70%;
-    }
-    .text {
-        opacity: 1;
-        top: calc(70% + 75px);
-        left: 10%;
-    }
-}
-
-@media screen and (max-width:768px) {
-    #albumPoster {
-        width: 100px;
-        top: 50%;
-    }
-    #vinylImg {
-        width: 90px;
-        left: 15%;
-        top: 50%;
-    }
-    .text {
-        font-size: 7px;
-        opacity: 1;
-        top: calc(50% + 50px);
-        left: 8%;
-    }
-    .dark-theme .text{
-        opacity: 1;
-        color: #ffffff;
-        transition: ease-in-out 0.3s;
-    }
-}
-
-.saurav img {
     width: 100%;
     height: auto;
     filter: grayscale(100%);
