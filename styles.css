@@ -187,7 +187,23 @@ header {
 }
 
 .pcontainer {
-    width: 60%;
+    width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+    .pcontainer {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .pcontainer {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .pcontainer {
+        width: 60%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -206,9 +222,7 @@ header {
     .navbar-line {
         top: 4rem;
     }
-    .pcontainer{
-        width: 100%;
-    }
+    
     .playlist{
         width: 100%;
     }
