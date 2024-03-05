@@ -206,6 +206,20 @@ header {
     .navbar-line {
         top: 4rem;
     }
+    .pcontainer{
+        width: 100%;
+    }
+    .narcissist{
+        padding-left: 0%;
+    }
+    .lana{
+        padding-left: 0%;
+        
+    }
+    .innerchild{
+        padding-left: 0%;
+
+    }
 }
 
 .narcissist {
