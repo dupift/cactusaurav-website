@@ -209,16 +209,8 @@ header {
     .pcontainer{
         width: 100%;
     }
-    .narcissist{
-        padding-left: 0%;
-    }
-    .lana{
-        padding-left: 0%;
-        
-    }
-    .innerchild{
-        padding-left: 0%;
-
+    .playlist{
+        width: 100%;
     }
 }
 
