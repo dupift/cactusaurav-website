@@ -1,4 +1,3 @@
-
 const themeButton = document.getElementById('theme-button');
 const themeIcon = document.getElementById('theme-icon');
 
@@ -99,16 +98,25 @@ function toggleVinylAndSong(event) {
         const audio = document.getElementById("audioPlayer");
         
         if (isPlaying) {
-            vinyl.style.animationPlayState = "paused"; // Pause the vinyl rotation
-            audio.pause(); // Pause the song
+            vinyl.style.animationPlayState = "paused";
+            audio.pause(); 
         } else {
-            vinyl.style.animationPlayState = "running"; // Resume the vinyl rotation
-            audio.play(); // Play the song
+            vinyl.style.animationPlayState = "running"; 
+            audio.play(); 
         }
         
-        isPlaying = !isPlaying; // Toggle the play state
+        isPlaying = !isPlaying; 
     }
 }
 
 
 
+function enterFullScreenOnMobile() {
+    if (window.innerWidth <= 768) {
+        if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen();
+        }
+    }
+}
+
+window.onload = enterFullScreenOnMobile;
