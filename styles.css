@@ -181,6 +181,11 @@ header {
     color: white;
 }
 
+.always {
+    cursor: context-menu;
+    color: grey;
+}
+
 .playlist {
     width: 60%;
     padding-left: 5px;
@@ -189,20 +194,17 @@ header {
 .pcontainer {
     width: 100%;
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (max-width: 3840px) {
     .pcontainer {
-        width: 60%;
-    }
-}
-@media only screen and (max-width: 768px) {
-    .pcontainer {
-        width: 100%;
+        transition: ease-in-out 0.3s;
+        width: 40%;
     }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
     .pcontainer {
-        width: 60%;
+        width: 100%;
     }
 }
 
@@ -222,8 +224,8 @@ header {
     .navbar-line {
         top: 4rem;
     }
-    
-    .playlist{
+
+    .playlist {
         width: 100%;
     }
 }
@@ -284,7 +286,7 @@ header {
     user-select: none;
     cursor: context-menu;
     position: absolute;
-    top: calc(70% + 100px);
+    top: calc(70% + 105px);
     left: 8%;
     transform: translateX(-50%);
     text-align: center;
@@ -292,7 +294,9 @@ header {
     font-size: 16px;
     z-index: 3;
 }
-
+.light-theme .text{
+    color: white;
+}
 #vinylImg {
     user-select: none;
     position: absolute;
@@ -311,6 +315,7 @@ header {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
@@ -329,26 +334,30 @@ header {
     }
 
     .text {
-        top: calc(70% + 75px);
-        left: 10%;
+        top: calc(70% + 69px);
+        left: 8%;
     }
 }
 
 @media screen and (max-width: 768px) {
     #albumPoster {
-        width: 100px;
+        width: 80px;
         top: 50%;
+        margin-left: 5%;
     }
 
     #vinylImg {
-        width: 90px;
+        width: 75px;
         left: 15%;
         top: 50%;
+        margin-left: 5%;
     }
 
     .text {
-        top: calc(50% + 50px);
+        font-size: 10px;
+        top: calc(50% + 40px);
         left: 8%;
+        margin-left: 5%;
     }
 }
 
@@ -366,4 +375,74 @@ header {
 .light-theme .saurav img {
     transition: 0.5s;
     opacity: 1;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+
+}
+
+.message {
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.message img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.message-details {
+    flex-grow: 1;
+}
+
+.message .sender {
+    font-weight: bold;
+}
+
+.message .username {
+    color: #999;
+    font-weight: lighter;
+}
+
+.message-content {
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.message-text {
+    border-radius: 20px;
+    border: 10px solid #405DE6;
+    background-color: #405DE6;
+    color: #fff;
+}
+
+.receiver {
+
+    align-items: center;
+}
+
+.receiver-content {
+    color: white;
+    font-size: 14px;
+    background-color: #4e4e4e;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.leftchat {
+    margin-top: -35px;
+    font-size: 12px;
+    color: darkgrey;
+    text-align: center;
+}
+.footer{
+    margin-bottom: 20rem;
 }
