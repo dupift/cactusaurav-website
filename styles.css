@@ -1,6 +1,6 @@
 body {
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: bold;
     font-size: 15px;
     margin: 0;
@@ -141,73 +141,6 @@ header {
     height: 24px;
 }
 
-.listen {
-    user-select: none;
-    transition: 1s;
-    color: transparent;
-    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-    cursor: context-menu;
-}
-
-.listen:hover {
-    transition: 1s;
-    text-decoration: none;
-    color: #000000;
-    text-shadow: none;
-}
-
-.dark-theme .listen {
-    color: transparent;
-    transition: 1s;
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.975);
-}
-
-.dark-theme .listen:hover {
-    cursor: context-menu;
-    transition: 1s;
-    color: white;
-    text-shadow: none;
-}
-
-.spotify {
-    transition: 1s;
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--text-color, #000000);
-}
-
-.dark-theme .spotify {
-    transition: 1s;
-    color: white;
-}
-
-.always {
-    cursor: context-menu;
-    color: grey;
-}
-
-.playlist {
-    width: 60%;
-    padding-left: 5px;
-}
-
-.pcontainer {
-    width: 100%;
-}
-
-@media only screen and (max-width: 3840px) {
-    .pcontainer {
-        transition: ease-in-out 0.3s;
-        width: 40%;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .pcontainer {
-        width: 100%;
-    }
-}
-
 @media only screen and (max-width: 768px) {
     .navbar {
         padding: 0;
@@ -224,42 +157,6 @@ header {
     .navbar-line {
         top: 4rem;
     }
-
-    .playlist {
-        width: 100%;
-    }
-}
-
-.narcissist {
-    padding-left: 5%;
-    padding-top: 0px;
-}
-
-.narcissist h3 {
-    margin-left: -3%;
-    letter-spacing: 0.5px;
-}
-
-.lana {
-    padding-left: 5%;
-    margin-top: -80px;
-}
-
-.lana h3 {
-    letter-spacing: 0.5px;
-    word-spacing: 1px;
-    margin-left: -3%;
-}
-
-.innerchild {
-    padding-left: 5%;
-    margin-top: -80px;
-}
-
-.innerchild h3 {
-    letter-spacing: 0.5px;
-    word-spacing: 1px;
-    margin-left: -3%;
 }
 
 .saurav {
@@ -294,9 +191,11 @@ header {
     font-size: 16px;
     z-index: 3;
 }
-.light-theme .text{
+
+.light-theme .text {
     color: white;
 }
+
 #vinylImg {
     user-select: none;
     position: absolute;
@@ -425,7 +324,6 @@ header {
 }
 
 .receiver {
-
     align-items: center;
 }
 
@@ -443,6 +341,202 @@ header {
     color: darkgrey;
     text-align: center;
 }
-.footer{
-    margin-bottom: 20rem;
+
+
+.woork {
+    max-width: 768px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.july{
+    max-width: 168px;
+}
+.lvideo {
+    max-width: 600px;
+margin-left: 7.5rem;
+margin-top: -2.5rem;
+
+}
+
+.nwork {
+    color: #999;
+}
+
+.nwork h1 {
+    color: #000;
+}
+
+.nwork p {
+    margin-top: -15px;
+}
+
+.lvideo h1 {
+    color: #000;
+}
+
+.nwork h2 {
+    color: #000;
+}
+
+.nwork h3 {
+    color: #999;
+}
+
+.notablework img { 
+    width:100% ;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:768px){
+    .notablework img{
+       border-radius: 10px;
+    }
+    
+}
+
+
+.lvideo h4 {
+    list-style-type: disc;
+}
+
+.lvideo li {
+    margin-top: -10px;
+    margin-bottom: 10px; 
+}
+.dark-theme .lvideo h2,
+.dark-theme .nwork h1 {
+    color: white;
+}
+.raat{
+    margin-bottom: 20px;
+}
+.raat a {
+   
+    position: relative;
+    text-decoration: none;
+    color: black; 
+}
+
+.raat a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1.5px; 
+    background-color: rgb(136, 136, 136); 
+    transition: width 0.5s ease-in-out;
+}
+
+.raat a:hover::after {
+    width: 100%;
+}
+
+.dark-theme .raat a {
+color: white;
+}
+
+.playlist-container{
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.playlist-text-container p,
+.playlist-text-container .listen,
+.playlist-text-container .to {
+    display: inline;
+    margin: 0; 
+}
+
+.playlist-text-container p {
+    cursor: context-menu;
+    color: white;
+}
+
+.playlist-text-container .listen {
+    cursor: context-menu;
+}
+
+.to a {
+    color: white;
+    text-decoration: none;
+}
+
+.light-theme .playlist-text-container p,
+.light-theme .to a {
+    color: black;
+}
+
+.spotify{
+    letter-spacing: 0.5px;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-top: -20px;
+}
+.stittle{
+    color: #000;
+}
+.dark-theme .stittle{
+    color: white;
+}
+
+.gallery {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery h4 {
+    color: white;
+    position: relative;    
+     text-decoration: none;
+     cursor: pointer;
+}
+
+.gallery h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1.5px;
+    background-color: rgb(136, 136, 136);
+    transition: width 0.5s ease-in-out;
+}
+
+.gallery h4:hover::after {
+    width: 30%;
+}
+
+.light-theme .gallery h4{
+    color: black;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.column {
+    flex: 1;
+}
+
+.column img {
+    width: 100%; 
+    border-radius: 8px; 
+}
+
+.gallery img {
+    filter: grayscale(70%);
+    transition: filter 0.5s ease;
+}
+
+.gallery img:hover {
+    filter: none;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    z-index: 6;
 }

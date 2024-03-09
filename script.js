@@ -36,7 +36,7 @@ if (savedTheme === 'dark') {
 
 
 function closeWebsite() {
-    window.close(); 
+    window.close();
 }
 
 function minimizeWindow() {
@@ -77,6 +77,7 @@ function updateClock() {
 
 setInterval(updateClock, 1000);
 updateClock();
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -120,3 +121,6 @@ function enterFullScreenOnMobile() {
 }
 
 window.onload = enterFullScreenOnMobile;
+const images = document.querySelectorAll('.column img');
+
+
