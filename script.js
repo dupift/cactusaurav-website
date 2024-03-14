@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let isPlaying = false;
 
-function toggleVinylAndSong(event) {
+function toggleVinylAndSong(event) {                                           
     const clickedElementId = event.target.id;
     const validElements = ["sauravImg", "albumPoster"];
 
