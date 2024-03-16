@@ -547,3 +547,21 @@ color: white;
     padding: 20px;
     color: white;
 }
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+
+  }
+  #arrowIcon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  #backToTopBtn img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  

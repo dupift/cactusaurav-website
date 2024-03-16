@@ -247,3 +247,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 });
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTopBtn").style.display = "block";
+    document.getElementById("arrowIcon").src = getArrowImage(); 
+    document.getElementById("backToTopBtn").href = "#top";
+    document.getElementById("backToTopBtn").title = "Back to Top";
+    document.getElementById("backToTopBtn").setAttribute("aria-label", "Back to Top");
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0;
+}
+
+function getArrowImage() {
+
+  var isDarkTheme = document.body.classList.contains("dark-theme"); 
+  if (isDarkTheme) {
+    return "dark-up-arrow.png";
+  } else {
+    return "up-arrow.png";
+  }
+}

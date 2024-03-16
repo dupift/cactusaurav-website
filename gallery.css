@@ -394,3 +394,21 @@ input[type="range"]::-webkit-slider-runnable-track {
 .video-container h3 {
     color: #f2f291;
 }
+#backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  
+  #backToTopBtn img {
+    width: 24px;
+    height: 24px; 
+  }
+  
+ 
+  #backToTopBtn img:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
