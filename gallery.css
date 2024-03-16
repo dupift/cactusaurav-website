@@ -253,6 +253,10 @@ video {
     width: 100%;
     height: auto;
 }
+.dark-theme video{
+    box-sizing: border-box;
+    border: 0.5px solid #fff; 
+}
 #myVideo3 {
     width: 45%; 
     height: auto; 
