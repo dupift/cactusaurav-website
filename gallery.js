@@ -89,3 +89,161 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById("myVideo");
+    var seekBar = document.getElementById("seek-bar");
+    var currentTime = document.getElementById("current-time");
+    var totalTime = document.getElementById("total-time");
+
+    var video2 = document.getElementById("myVideo2");
+    var seekBar2 = document.getElementById("seek-bar-2");
+    var currentTime2 = document.getElementById("current-time-2");
+    var totalTime2 = document.getElementById("total-time-2");
+
+    var video3 = document.getElementById("myVideo3");
+    var seekBar3 = document.getElementById("seek-bar-3");
+    var currentTime3 = document.getElementById("current-time-3");
+    var totalTime3 = document.getElementById("total-time-3");
+
+    var video4 = document.getElementById("myVideo4"); 
+    var seekBar4 = document.getElementById("seek-bar-4"); 
+    var currentTime4 = document.getElementById("current-time-4"); 
+    var totalTime4 = document.getElementById("total-time-4");
+    
+    function formatTime(time) {
+        var minutes = Math.floor(time / 60);
+        var seconds = Math.floor(time % 60);
+        return pad(minutes) + ":" + pad(seconds);
+    }
+
+    function pad(num) {
+        return ("0" + num).slice(-2);
+    }
+
+    video.addEventListener("loadedmetadata", function() {
+        totalTime.textContent = formatTime(video.duration);
+        seekBar.max = video.duration;
+    });
+
+    video2.addEventListener("loadedmetadata", function() {
+        totalTime2.textContent = formatTime(video2.duration);
+        seekBar2.max = video2.duration;
+    });
+    video3.addEventListener("loadedmetadata", function() {
+        totalTime3.textContent = formatTime(video3.duration);
+        seekBar3.max = video3.duration;
+    });
+    video4.addEventListener("loadedmetadata", function() {
+        totalTime4.textContent = formatTime(video4.duration);
+        seekBar4.max = video4.duration;
+    });
+
+    video.addEventListener("timeupdate", function() {
+        currentTime.textContent = formatTime(video.currentTime);
+        seekBar.value = video.currentTime;
+    });
+
+    video2.addEventListener("timeupdate", function() {
+        currentTime2.textContent = formatTime(video2.currentTime);
+        seekBar2.value = video2.currentTime;
+    });
+
+    video3.addEventListener("timeupdate", function() {
+        currentTime3.textContent = formatTime(video3.currentTime);
+        seekBar3.value = video3.currentTime;
+    });
+
+    video4.addEventListener("timeupdate", function() {
+        currentTime4.textContent = formatTime(video4.currentTime);
+        seekBar4.value = video4.currentTime;
+    });
+
+    seekBar.addEventListener("input", function() {
+        video.currentTime = seekBar.value;
+    });
+
+    seekBar2.addEventListener("input", function() {
+        video2.currentTime = seekBar2.value;
+    });
+    seekBar3.addEventListener("input", function() {
+        video3.currentTime = seekBar3.value;
+    });
+    seekBar4.addEventListener("input", function() {
+        video4.currentTime = seekBar4.value;
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    var video1 = document.getElementById("myVideo");
+    var seekBar1 = document.getElementById("seek-bar");
+    var currentTime1 = document.getElementById("current-time");
+    var totalTime1 = document.getElementById("total-time");
+
+    var video2 = document.getElementById("myVideo2");
+    var seekBar2 = document.getElementById("seek-bar-2");
+    var currentTime2 = document.getElementById("current-time-2");
+    var totalTime2 = document.getElementById("total-time-2");
+   
+    var video3 = document.getElementById("myVideo3");
+    var seekBar3 = document.getElementById("seek-bar-3");
+    var currentTime3 = document.getElementById("current-time-3");
+    var totalTime3 = document.getElementById("total-time-3");
+    
+    var video4 = document.getElementById("myVideo4");
+    var seekBar4 = document.getElementById("seek-bar-4");
+    var currentTime4 = document.getElementById("current-time-4");
+    var totalTime4 = document.getElementById("total-time-4");
+
+    function formatTime(time) {
+        var minutes = Math.floor(time / 60);
+        var seconds = Math.floor(time % 60);
+        return pad(minutes) + ":" + pad(seconds);
+    }
+
+    function pad(num) {
+        return ("0" + num).slice(-2);
+    }
+
+    function playVideo(video) {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    function pauseVideo(video) {
+        if (!video.paused) {
+            video.pause();
+        }
+    }
+
+    video1.addEventListener("click", function() {
+        playVideo(video1);
+        pauseVideo(video2);
+        pauseVideo(video3);
+        pauseVideo(video4);
+    });
+
+    video2.addEventListener("click", function() {
+        playVideo(video2);
+        pauseVideo(video1);
+        pauseVideo(video3);
+        pauseVideo(video4);
+    });
+    video3.addEventListener("click", function() {
+        playVideo(video3);
+        pauseVideo(video1); 
+        pauseVideo(video2);
+        pauseVideo(video4);
+    });
+    video4.addEventListener("click", function() {
+        playVideo(video4);
+        pauseVideo(video1); 
+        pauseVideo(video2);
+        pauseVideo(video3);
+    });
+
+
+});
