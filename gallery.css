@@ -255,7 +255,7 @@ video {
 }
 .dark-theme video{
     box-sizing: border-box;
-    border: 0.5px solid #fff; 
+    border: 1px solid #fff; 
 }
 #myVideo3 {
     width: 45%; 
